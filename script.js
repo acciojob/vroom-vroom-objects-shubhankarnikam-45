@@ -1,7 +1,30 @@
 // Complete the js code
-function Car(make, model) {}
+function Car(make, model) {
+	this.make = make;
+	this.model = model;
+}
 
-function SportsCar(make, model, topSpeed) {}
+//add method to the car prototype.
+Car.prototype = function getMakeModel(){
+	return this.make+" "+this.model;
+}
+
+Car.prototype = function get1MakeModel(){
+	return this.make+" "+this.model;
+}
+
+// console.log(Function.__proto__.__proto__);
+
+function SportsCar(make, model, topSpeed) {
+	Car.call(this, make, model);
+	return topSpeed;
+}
+
+//inherit the Car prototpye.
+SportsCar.prototype = SportsCar;
+SportsCar.prototype = function getToSpeed() {
+	return this.topSpeed;
+}
 
 // Do not change the code below
 window.Car = Car;
