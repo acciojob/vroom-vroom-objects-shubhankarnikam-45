@@ -9,9 +9,6 @@ Car.prototype = function getMakeModel(){
 	return this.make+" "+this.model;
 }
 
-Car.prototype = function get1MakeModel(){
-	return this.make+" "+this.model;
-}
 
 // console.log(Function.__proto__.__proto__);
 
